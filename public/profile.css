@@ -1,24 +1,2 @@
-*{
-  color: white;
-}
 
 
-body{
-  /* background-color: lightblue; */
-  background-image: url(img/sl.jpg);
-  background-size: cover;
-}
-img{
-  height: 200px;
-}
-.row{
-  background-color: black;
-  min-height: 100px;
-}
-/* .container{
-  margin-top: 100px;
-} */
-
-#pending{
-  text-align: center;
-}

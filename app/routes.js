@@ -8,13 +8,12 @@ module.exports = function (app, passport, db) {
   app.get("/profile", isLoggedIn, function (req, res) {
     db.collection("orders")
       .find()
-      .toArray((err, result) => {
-        if (err) return console.log(err);
-        res.render("profile.ejs", {
-          user: req.user,
-          orders: result,
-        });
-      });
+      .toArray()
+      .then(results => {
+        let notCompleted = results.filter(element => element.completed === false)
+        let completed = results.filter(element => element.completed === true)
+        res.render('profile.ejs', { user: req.user, orders: notCompleted, done: completed})
+    })
   });
 
   // LOGOUT ==============================
@@ -36,6 +35,7 @@ module.exports = function (app, passport, db) {
         espresso: req.body.espresso,
         caramel: req.body.caramel,
         sugar: req.body.style,
+        completed: false,
         //arg
         status: "not made yet!",
         barista: "",
@@ -56,7 +56,8 @@ module.exports = function (app, passport, db) {
       {
         $set: {
           status: "is ready for pick-up",
-          barista: req.user.local.email,
+          completed: true,
+          barista: req.user.local.username,
         },
       },
       {
@@ -72,10 +73,10 @@ module.exports = function (app, passport, db) {
   app.delete("/orders", (req, res) => {
     db.collection("orders").findOneAndDelete(
       {         name: req.body.name,
-        order: req.body.order  },
+         done: req.body.done, completed: req.body.completed },
       (err, result) => {
         if (err) return res.send(500, err);
-        res.send("Message deleted!");
+        res.send("Order deleted!");
       }
     );
   });

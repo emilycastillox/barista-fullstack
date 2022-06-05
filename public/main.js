@@ -1,5 +1,5 @@
-var ready = document.getElementsByClassName("fas fa-mug-hot");
-var trash = document.getElementsByClassName("fa-trash");
+let ready = document.getElementsByClassName("fas fa-mug-hot");
+let trash = document.getElementsByClassName("fa-trash");
 
 Array.from(trash).forEach(function(element) {
       element.addEventListener('click', function(){
@@ -28,7 +28,7 @@ Array.from(ready).forEach(function(element) {
         const order = this.parentNode.parentNode.childNodes[5].innerText //not finding it 
         const status = this.parentNode.parentNode.childNodes[7].innerText
         const barista = this.parentNode.parentNode.childNodes[9].innerText
-        console.log("BAR", barista, "ORDER",order, "STAT", status, "NAME", name );
+        console.log(order, name );
         fetch('orders', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
