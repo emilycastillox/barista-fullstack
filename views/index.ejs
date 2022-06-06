@@ -2,77 +2,90 @@
 <html>
 
 <head>
-  <title>Mate Lounge</title>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <title>Jasmine Dragon Tea Shop</title>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Leckerli+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
   <div class="container">
     <section id="barista">
-
-      <!-- <p id="loginSignUpBaristas">Baristas: </p> -->
-      <h3 id="loginSignUp"> Baristas, access orders here:</h3><br>
+      <h3 id="loginSignUp"> Barista Login:</h3><br>
       <button class="loginButton"> <a href="/login"> Log In </a> </button>
       <button class="signUpButton"> <a href="/signup"> Sign Up </a> </button>
     </section>
-  </section>
-
+    </section>
     <div class="jumbotron text-center">
-
-      <h1 id="title">Mate Lounge</h1><br>
-      <!-- <img src="/img/mate.jpg" alt="mate"><br><br> -->
+      <img src="pic-removebg-preview.png" alt="mate">
+      <h1 id="title">Uncle Iroh's Jasmine Dragon Tea Shop</h1><br>
       <div class="CashierTitle">
-        <h3 id="cashier">Cashiers, input order below:</h3><br>
+        <h3 id="cashier">Input order below:</h3><br>
       </div>
 
-      <section id="bottomTwo">
-        <section id="cashierSec">
+      <section id="orderingPanel">
         <form class="CashierTitle" action="/orders" method="POST">
           <div class="sub">
-            <input type="text" placeholder="Customer Name" name="cName"><br>
-            <button type="submit">Submit</button><br><br>
+            <input type="text" placeholder="Customer Name" name="cName" id="customerName"><br>
+            <button type="submit" id="submit">Submit</button><br><br>
             </div>
             <div class="orderType">
-          <!-- <input type="text" placeholder="type of smoothie" name="order"><br> -->
-          <label for="espresso">Matcha Latte</label>
-          <input type="radio" value="Matcha Latte" name="order"><br>
-          <!-- <label for="caramel">Strawberry</label>
-                <input type="radio" placeholder="Caramel Pump" name="caramel"> -->
-          <label for="style">Peach Iced Tea</label>
-          <input type="radio" value="Peach Iced Tea" name="order"><br>
-          //
-          <label for="cream">Strawberry Lemonade</label>
-          <input type="radio" value="Strawberry Lemonade" name="order"><br>
-          <label for="milk">Seltzer Water</label>
-          <input type="radio" value="Seltzer Water" name="order">
-          <br>
-          <select class="Size" name="size">
-            <option value="none" selected disabled  hidden></option>
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-          </select><br>
-          <!-- <br> -->
-
-        </div>
-       <div class="orderType">
-              <!-- <input type="text" placeholder="type of smoothie" name="order"><br> -->
-              <label for="espresso">Iced White Mocha</label>
-              <input type="radio" value="Iced White Mocha" name="order"><br>
-              <!-- <label for="caramel">Strawberry</label>
-                    <input type="radio" placeholder="Caramel Pump" name="caramel"> -->
-              <label for="style">Iced Latte</label>
-              <input type="radio" value="Iced Latte" name="order"><br>
-              //
-              <label for="cream">Iced Caramel Macchiato</label>
-              <input type="radio" value="Iced Caramel Macchiato" name="order"><br>
-              <label for="milk">Iced Coffee</label>
-              <input type="radio" value="Iced Coffee" name="order">
+            <h3>Signature Teas</h3>
+                <label for="espresso">Matcha Latte</label>
+                  <input type="radio" value="Matcha Latte" name="order"><br>
+                <label for="caramel">Lavender Rose Milk Tea</label>
+                  <input type="radio" value="Lavender Rose Milk Tea" name="order"><br>
+                <label for="style">Pu'er Tea</label>
+                  <input type="radio" value="Pu'er Tea" name="order"><br>
+                <label for="cream">Hojicha Latte</label>
+                  <input type="radio" value="Hojicha Latte" name="order"><br>
+                <label for="milk">Jasmine Dragon Special Tea</label>
+                  <input type="radio" value="Jasmine Dragon Special Tea" name="order">
+                <br>
+                <select class="Size" name="size">
+                  <option value="none" selected disabled  hidden></option>
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+                </select><br>
+          </div>
+        <div class="orderType">
+          <h3>Fruit Teas</h3>
+               <label for="espresso">Lychee Green Tea</label>
+                 <input type="radio" value="Lychee Green Tea" name="order"><br>
+               <label for="caramel">Strawberry Black Tea</label>
+                 <input type="radio" value="Strawberry Black Tea" name="order"><br>
+               <label for="style">Guava White Peach Iced Tea</label>
+                 <input type="radio" value="Guava White Peach Iced Tea" name="order"><br>
+               <label for="cream">Mango Green Tea</label>
+                 <input type="radio" value="Mango Green Tea" name="order"><br>
+               <label for="milk">Passion Fruit Black Tea</label>
+                 <input type="radio" value="Passion Fruit Black Tea" name="order">
+               <br>
+               <select class="Size" name="size">
+                 <option value="none" selected disabled  hidden></option>
+                 <option value="Small">Small</option>
+                 <option value="Medium">Medium</option>
+                 <option value="Large">Large</option>
+               </select><br>
+         </div>
+         <div class="orderType">
+           <h3>More Specialtea Drinks</h3>
+              <label for="espresso">Iced Coffee</label>
+                <input type="radio" value="Iced Coffee" name="order"><br>
+              <label for="caramel"> Matcha with Expresso Latte</label>
+                <input type="radio" value="Matcha with Expresso Latte" name="order"><br>
+              <label for="style">Chai Latte</label>
+                <input type="radio" value="Chai Latte" name="order"><br>
+              <label for="cream">Oolong Tea</label>
+                <input type="radio" value="Oolong Tea" name="order"><br>
+              <label for="milk">London Fog Latte</label>
+                <input type="radio" value="London Fog Latte" name="order">
               <br>
               <select class="Size" name="size">
                 <option value="none" selected disabled  hidden></option>
@@ -80,28 +93,27 @@
                 <option value="Medium">Medium</option>
                 <option value="Large">Large</option>
               </select><br>
-       </div>
-        <div class="orderType">
-          <!-- <input type="text" placeholder="type of smoothie" name="order"><br> -->
-          <label for="espresso">Hot Coffee</label>
-          <input type="radio" value="Hot Coffee" name="order"><br>
-          <!-- <label for="caramel">Strawberry</label>
-                <input type="radio" placeholder="Caramel Pump" name="caramel"> -->
-          <label for="style">Hot Latte</label>
-          <input type="radio" value="Hot Latte" name="order"><br>
-          //
-          <label for="cream">Hot Caramel Macchiato</label>
-          <input type="radio" value="Hot Caramel Macchiato" name="order"><br>
-          <label for="milk">Hot Mocha</label>
-          <input type="radio" value="Hot Mocha" name="order">
-          <br>
-          <select class="Size" name="size">
-            <option value="none" selected disabled  hidden></option>
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-          </select><br>
-        </div>
+          </div>
+          <div class="orderType">
+            <h3>Other Items</h3>
+               <label for="espresso">Matcha Crepe Cake</label>
+                 <input type="radio" value="Matcha Crepe Cake" name="order"><br>
+               <label for="caramel"> Pineapple Cake</label>
+                 <input type="radio" value="Pineapple Cake" name="order"><br>
+               <label for="style"> Crysanthemum Tea</label>
+                 <input type="radio" value="Crysanthemum Tea" name="order"><br>
+               <label for="cream">Ginger Milk Tea</label>
+                 <input type="radio" value="Ginger Milk Tea" name="order"><br>
+               <label for="milk">Rasberry Lychee Lemonade</label>
+                 <input type="radio" value="Rasberry Lychee Lemonade" name="order">
+               <br>
+               <select class="Size" name="size">
+                 <option value="none" selected disabled  hidden></option>
+                 <option value="Small">Small</option>
+                 <option value="Medium">Medium</option>
+                 <option value="Large">Large</option>
+               </select><br>
+           </div>
       </section>
     </form>
     </div>

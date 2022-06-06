@@ -2,11 +2,13 @@
 <html>
 <!-- links to all the files main css, bootstrap etc -->
 <head>
-  <title>Mate Lounge</title>
-  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
+  <title>Jasmine Dragon</title>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="profile.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,11 +21,11 @@
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
     </div>
 
-    <div class="row">
+    <div class="pending">
       <h2>Pending Orders</h2>
-        <h5 id="pending">If order has been completed, click on mug to update status</h5>
+        <h5 id="pending">Click on the Mug to Update Order Status</h5>
         <ul class="messages">
-          <% for(let i=0; i< orders.length; i++) {%> <!-- a for loop to go over the class="message" displaying the name, message, ready, mug and trashcan. In addition to any other feature you want to add-->
+          <% for(let i=0; i< orders.length; i++) {%> 
           <section id="<%=orders[i]._id%>">
           <li class="message">
             <span><%= orders[i].name%></span>
@@ -34,7 +36,6 @@
             <% if(orders[i].status !== 'is ready for pick-up'){%>
             <span><i class="fas fa-mug-hot" aria-hidden="true"></i></span>
             <% } %>
-            <span><i class="fa fa-trash" aria-hidden="true"></i></span>
           </li>
           <% } %>
           </section>
@@ -44,30 +45,30 @@
       <% } %>
     </div>
 
-    <div class="col-sm-6">
+    <div class="finished">
       <h2>Finished Orders</h2>
+      <span>Click Here To Clear Finished Orders<i class="fa fa-trash" aria-hidden="true"></i></span><br>
       <% for (let i = 0; i < done.length; i++) {%>
         <section id="<%=done[i]._id%>">
-          <span>#<%=i+1%></span>
-          <h3><%=done[i].barista%> completed: <%=done[i].name%>'s order</h3>
+          <section class="allSet">
+          <span id="number">Order #<%=i+1%></span>
+          <h3 class="whoDone"><%=done[i].barista%> completed: <%=done[i].name%>'s order</h3>
           <span><%=done[i].name%></span>
           <span><%=done[i].size%></span>
           <span><%=done[i].order%></span>
           <span><%=done[i].status%></span>
-          <span><%=done[i].barista%></span>
-
-          <!-- <span><i class="fa-solid fa-circle-check"></i></span> -->
+          <span>| (<%=done[i].barista%>)</span>
           <span><i class="fa fa-trash" aria-hidden="true"></i></span>
         </section>
+      </section>
       <%}%>
     </div>
-
+  </div>
 
 
     <script type="text/javascript" src="speech.js"></script>
     <script src="https://kit.fontawesome.com/077191d827.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
-
 </body>
 
 </html>

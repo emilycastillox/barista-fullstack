@@ -1,63 +1,124 @@
-#bottomTwo{
+*{
+  box-sizing: border-box; 
+  font-family: 'Open Sans', sans-serif, Helvetica;  
+}
+
+#title{
+  letter-spacing: 5px;
+  font-weight: 100;
+  color: rgb(36, 41, 32);
+
+}
+
+#orderingPanel{
   display: flex;
 }
 
+body{
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.container{
+  height: 1400px;
+  background: rgba(159, 182, 139, 0.843);
+  border-radius: 5px;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
 
+#loginSignUp, #title{
+  margin-bottom: 0px;
+}
+
+img{
+  height: 350px;
+  width: 65%;
+}
 .orderType{
   flex-direction: row;
   display: inline-block;
+  text-align: center;
+  margin-left: 60px;
+  line-height: 35px;
+  background: rgba(71, 83, 60, 0.778);
+  border-radius: 5px;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+  color: white;
+  margin-top: 30px;
+  padding: 20px;
 }
 
 .sub{
   display: flex;
   justify-content: center;
+  margin-left: 60px;
 }
 
-#barista{
-  width: 50%;
-}
-
-h3{
-  margin-right: 0;
-  margin-top: 0;
-}
-body{
-  padding-top: 80px;
-  word-wrap: break-word;
-  background-image: url(/public/img/bsas.jpg);
-  background-size: contain;
-}
-img{
-  max-height: 300px;
-}
-a{
-  color: black;
-  text-decoration: none;
-}
-.jumbotron{
-  background-size: cover;
-  background-color: lightgreen;
-  
-}
-#title{
-  color: #13585C;
-}
-
-/* #loginSignUp{
-  color: #13585C;
-  
-} */
-
-.CashierContainer{
-  text-align: center;
-}
 
 #loginSignUpBaristas{
   color: #13585C;
   font-size: 30px;
   font-weight: bold;
 }
+
+#customerName{
+  height: 40px;
+  width: 30%;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+}
+
 .loginButton, .signUpButton{
-  background-color: turquoise;
+  border: none;
+  border-radius: 4px;
+  width: 15%;
+  background: rgb(240, 243, 219);
+  color: rgba(71, 83, 60, 0.778);
+  height: 30px;
+  
+}
+
+.loginButton:hover{
+  background: rgb(156, 255, 95);
+}
+
+.signUpButton:hover{
+  background: rgb(156, 255, 95);
+}
+
+.loginButton:active{
+  background: rgb(70, 203, 107);
+}
+
+.signUpButton:active{
+  background: rgb(70, 203, 107);
+}
+
+a{
+  text-decoration: none;
+  color: rgb(36, 41, 32);
+}
+#submit:hover{
+  background: rgb(156, 255, 95);
+}
+
+#submit:active{
+  background: rgb(70, 203, 107);
+}
+
+#submit{
+  border: none;
+  border-radius: 4px;
+  width: 20%;
+  background: rgb(240, 243, 219);
+  color: rgba(71, 83, 60, 0.778);
+  height: 40px;
+}
+
+#cashier, #loginSignUp{
+  font-weight: 100;
 }

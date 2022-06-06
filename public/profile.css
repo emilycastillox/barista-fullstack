@@ -1,2 +1,50 @@
+*{
+    box-sizing: border-box; 
+    font-family: 'Open Sans', sans-serif, Helvetica;  
+  }
+  
 
+body{
+    background: rgb(58,171,107);
+background: linear-gradient(0deg, rgba(58,171,107,1) 0%, rgba(209,235,191,1) 100%);
+}
+
+.container, .finished{
+        height: 700px;
+        background: rgb(228, 239, 218);
+        border-radius: 5px;
+        box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+        width: 50%;
+        margin: auto;
+        text-align: center;
+}
+
+.allSet{
+    line-height: 5px;
+    margin-top: 40px;
+    background: rgb(88, 170, 123);
+    border-radius: 5px;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+    width: 70%;
+    margin-left: 150px;
+    padding: 15px;
+    color: rgb(228, 239, 218);
+}
+
+#number{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(21, 212, 145);
+}
+
+.whoDone{
+    font-weight: 100;
+}
+
+li{
+    list-style: none;
+}
 

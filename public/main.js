@@ -43,6 +43,14 @@ Array.from(ready).forEach(function(element) {
         .then(response => {
           if (response.ok) return response.json()
         })
+        .then(response => {
+          if (response.ok){
+            let orderUp = new SpeechSynthesisUtterance()
+            orderUp.text = 'order For ' + name + "is ready"
+            window.speechSynthesis.speak(orderUp)
+            window.location.reload(true)
+          }
+        })
         .then(data => {
           console.log(data)
           window.location.reload(true)

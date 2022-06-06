@@ -71,9 +71,8 @@ module.exports = function (app, passport, db) {
     );
   });
   app.delete("/orders", (req, res) => {
-    db.collection("orders").findOneAndDelete(
-      {         name: req.body.name,
-         done: req.body.done, completed: req.body.completed },
+    db.collection("orders").deleteMany(
+      { completed: true },
       (err, result) => {
         if (err) return res.send(500, err);
         res.send("Order deleted!");
