@@ -58,6 +58,10 @@ img{
   margin-left: 60px;
 }
 
+a:active{
+  background: rgb(70, 203, 107);
+}
+
 
 #loginSignUpBaristas{
   color: #13585C;
