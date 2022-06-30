@@ -25,7 +25,7 @@ body{
   background: rgba(159, 182, 139, 0.843);
   border-radius: 5px;
   box-shadow: 0 15px 20px rgba(0,0,0,0.3);
-  width: 50%;
+  width: 65%;
   margin: auto;
   text-align: center;
 }
@@ -42,7 +42,7 @@ img{
   flex-direction: row;
   display: inline-block;
   text-align: center;
-  margin-left: 60px;
+  margin-left: 50px;
   line-height: 35px;
   background: rgba(71, 83, 60, 0.778);
   border-radius: 5px;
